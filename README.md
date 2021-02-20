@@ -1,4 +1,4 @@
-# UnitySteppedConstraint
+# Unity Animation Rigging: Stepped Constraint
 This is a custom constraint built with Unity's Animation Rigging Package by allowing control of the framerate of an animation. The idea was to emulate frame-by-frame animation that you see in traditional 2d animations. 
 
 example- https://www.youtube.com/watch?v=63TGpArrnqQ&feature=youtu.be
