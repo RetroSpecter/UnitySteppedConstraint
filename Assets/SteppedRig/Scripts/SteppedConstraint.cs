@@ -73,8 +73,8 @@ public class SteppedBinder : AnimationJobBinder<SteppedJob, SteppedData>
 
         job.offset = AffineTransform.identity;
 
-        job.deltaTime = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.deltaTime)));
-        job.fps = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.fps)));
+        job.deltaTime = FloatProperty.Bind(animator, component, "m_Data." + nameof(data.deltaTime));
+        job.fps = FloatProperty.Bind(animator, component, "m_Data." + nameof(data.fps));
 
         if (data.maintainOffset) {
             job.offset.translation = data.source.position - data.target.position;
