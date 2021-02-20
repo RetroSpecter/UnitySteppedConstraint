@@ -16,12 +16,12 @@ class SteppedConstraintWindow : EditorWindow {
 
     void OnGUI()
     {
-        constrainedRig = (GameObject)EditorGUILayout.ObjectField("target rig", constrainedRig, typeof(GameObject), true);
-        targetRig = (GameObject)EditorGUILayout.ObjectField("Source A", targetRig, typeof(GameObject), true);
+        constrainedRig = (GameObject)EditorGUILayout.ObjectField("Source Rig", constrainedRig, typeof(GameObject), true);
+        targetRig = (GameObject)EditorGUILayout.ObjectField("Target Rig", targetRig, typeof(GameObject), true);
         Transform active = Selection.activeTransform;
 
         EditorGUI.BeginDisabledGroup(active == null || targetRig == null || constrainedRig == null);
-        if (GUILayout.Button(constrainedRig == null ? "Slect Object to apply Rig" : "Build Blend Rig to " + active.name))
+        if (GUILayout.Button(constrainedRig == null ? "Select Object to apply rig" : ("Build Blend Rig to " + active.name)))
         {
 
             DeleteChildren(active);
